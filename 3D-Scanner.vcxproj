@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9F1ABEBE-8226-4B92-AC8E-0B39C6AA2047}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>3D-Scanner</RootNamespace>
+    <ProjectName>3D-Scanner</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="KinectScanner.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="KinectScanner.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="KinectScanner.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="KinectScanner.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(KINECTSDK20_DIR)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x64;$(SolutionDir)$(Configuration);$(KINECTSDK20_DIR)\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files\PCL 1.7.2\3rdParty\FLANN\include;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;C:\Program Files\PCL 1.7.2\include\pcl-1.7;C:\Program Files\PCL 1.7.2\3rdParty\VTK\include\vtk-6.1;C:\Program Files\PCL 1.7.2\3rdParty\Boost\include\boost-1_56;C:\Program Files\PCL 1.7.2\3rdParty\Eigen\eigen3;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x64;$(SolutionDir)$(Platform)\$(Configuration);$(KINECTSDK20_DIR)\lib\x64;C:\Program Files\PCL 1.7.2\lib;C:\Program Files\PCL 1.7.2\3rdParty\Boost\lib;C:\Program Files\PCL 1.7.2\3rdParty\FLANN\lib;C:\Program Files\PCL 1.7.2\3rdParty\Qhull\lib;C:\Program Files\PCL 1.7.2\3rdParty\VTK\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(KINECTSDK20_DIR)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Configuration);$(KINECTSDK20_DIR)\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(KINECTSDK20_DIR)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration);$(KINECTSDK20_DIR)\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros">
+    <KinectToolkitDllVersion>20</KinectToolkitDllVersion>
+    <KinectFusionLib>Kinect$(KinectToolkitDllVersion).Fusion</KinectFusionLib>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kinect20.lib;$(KinectFusionLib).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <StackReserveSize>10000000</StackReserveSize>
+      <StackCommitSize>10000000</StackCommitSize>
+      <AdditionalLibraryDirectories>C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /C /Y "$(KINECTSDK20_DIR)Redist\Fusion\x86\$(KinectFusionLib).dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kinect20.lib;$(KinectFusionLib).lib;pcl_common_debug.lib;pcl_features_debug.lib;pcl_filters_debug.lib;pcl_io_debug.lib;pcl_io_ply_debug.lib;pcl_kdtree_debug.lib;pcl_keypoints_debug.lib;pcl_octree_debug.lib;pcl_outofcore_debug.lib;pcl_people_debug.lib;pcl_recognition_debug.lib;pcl_registration_debug.lib;pcl_sample_consensus_debug.lib;pcl_search_debug.lib;pcl_segmentation_debug.lib;pcl_surface_debug.lib;pcl_tracking_debug.lib;pcl_visualization_debug.lib;libboost_atomic-vc120-mt-gd-1_56.lib;libboost_chrono-vc120-mt-gd-1_56.lib;libboost_container-vc120-mt-gd-1_56.lib;libboost_context-vc120-mt-gd-1_56.lib;libboost_coroutine-vc120-mt-gd-1_56.lib;libboost_date_time-vc120-mt-gd-1_56.lib;libboost_exception-vc120-mt-gd-1_56.lib;libboost_filesystem-vc120-mt-gd-1_56.lib;libboost_graph-vc120-mt-gd-1_56.lib;libboost_iostreams-vc120-mt-gd-1_56.lib;libboost_locale-vc120-mt-gd-1_56.lib;libboost_log-vc120-mt-gd-1_56.lib;libboost_log_setup-vc120-mt-gd-1_56.lib;libboost_math_c99-vc120-mt-gd-1_56.lib;libboost_math_c99f-vc120-mt-gd-1_56.lib;libboost_math_c99l-vc120-mt-gd-1_56.lib;libboost_math_tr1-vc120-mt-gd-1_56.lib;libboost_math_tr1f-vc120-mt-gd-1_56.lib;libboost_math_tr1l-vc120-mt-gd-1_56.lib;libboost_mpi-vc120-mt-gd-1_56.lib;libboost_prg_exec_monitor-vc120-mt-gd-1_56.lib;libboost_program_options-vc120-mt-gd-1_56.lib;libboost_random-vc120-mt-gd-1_56.lib;libboost_regex-vc120-mt-gd-1_56.lib;libboost_serialization-vc120-mt-gd-1_56.lib;libboost_signals-vc120-mt-gd-1_56.lib;libboost_system-vc120-mt-gd-1_56.lib;libboost_test_exec_monitor-vc120-mt-gd-1_56.lib;libboost_thread-vc120-mt-gd-1_56.lib;libboost_timer-vc120-mt-gd-1_56.lib;libboost_unit_test_framework-vc120-mt-gd-1_56.lib;libboost_wave-vc120-mt-gd-1_56.lib;libboost_wserialization-vc120-mt-gd-1_56.lib;flann_cpp_s-gd.lib;qhullstatic_d.lib;vtkalglib-6.1-gd.lib;vtkChartsCore-6.1-gd.lib;vtkCommonColor-6.1-gd.lib;vtkCommonComputationalGeometry-6.1-gd.lib;vtkCommonCore-6.1-gd.lib;vtkCommonDataModel-6.1-gd.lib;vtkCommonExecutionModel-6.1-gd.lib;vtkCommonMath-6.1-gd.lib;vtkCommonMisc-6.1-gd.lib;vtkCommonSystem-6.1-gd.lib;vtkCommonTransforms-6.1-gd.lib;vtkDICOMParser-6.1-gd.lib;vtkDomainsChemistry-6.1-gd.lib;vtkexoIIc-6.1-gd.lib;vtkexpat-6.1-gd.lib;vtkFiltersAMR-6.1-gd.lib;vtkFiltersCore-6.1-gd.lib;vtkFiltersExtraction-6.1-gd.lib;vtkFiltersFlowPaths-6.1-gd.lib;vtkFiltersGeneral-6.1-gd.lib;vtkFiltersGeneric-6.1-gd.lib;vtkFiltersGeometry-6.1-gd.lib;vtkFiltersHybrid-6.1-gd.lib;vtkFiltersHyperTree-6.1-gd.lib;vtkFiltersImaging-6.1-gd.lib;vtkFiltersModeling-6.1-gd.lib;vtkFiltersParallel-6.1-gd.lib;vtkFiltersParallelImaging-6.1-gd.lib;vtkFiltersProgrammable-6.1-gd.lib;vtkFiltersSelection-6.1-gd.lib;vtkFiltersSMP-6.1-gd.lib;vtkFiltersSources-6.1-gd.lib;vtkFiltersStatistics-6.1-gd.lib;vtkFiltersTexture-6.1-gd.lib;vtkFiltersVerdict-6.1-gd.lib;vtkfreetype-6.1-gd.lib;vtkftgl-6.1-gd.lib;vtkGeovisCore-6.1-gd.lib;vtkgl2ps-6.1-gd.lib;vtkhdf5-6.1-gd.lib;vtkhdf5_hl-6.1-gd.lib;vtkImagingColor-6.1-gd.lib;vtkImagingCore-6.1-gd.lib;vtkImagingFourier-6.1-gd.lib;vtkImagingGeneral-6.1-gd.lib;vtkImagingHybrid-6.1-gd.lib;vtkImagingMath-6.1-gd.lib;vtkImagingMorphological-6.1-gd.lib;vtkImagingSources-6.1-gd.lib;vtkImagingStatistics-6.1-gd.lib;vtkImagingStencil-6.1-gd.lib;vtkInfovisCore-6.1-gd.lib;vtkInfovisLayout-6.1-gd.lib;vtkInteractionImage-6.1-gd.lib;vtkInteractionStyle-6.1-gd.lib;vtkInteractionWidgets-6.1-gd.lib;vtkIOAMR-6.1-gd.lib;vtkIOCore-6.1-gd.lib;vtkIOEnSight-6.1-gd.lib;vtkIOExodus-6.1-gd.lib;vtkIOExport-6.1-gd.lib;vtkIOGeometry-6.1-gd.lib;vtkIOImage-6.1-gd.lib;vtkIOImport-6.1-gd.lib;vtkIOInfovis-6.1-gd.lib;vtkIOLegacy-6.1-gd.lib;vtkIOLSDyna-6.1-gd.lib;vtkIOMINC-6.1-gd.lib;vtkIOMovie-6.1-gd.lib;vtkIONetCDF-6.1-gd.lib;vtkIOParallel-6.1-gd.lib;vtkIOPLY-6.1-gd.lib;vtkIOSQL-6.1-gd.lib;vtkIOVideo-6.1-gd.lib;vtkIOXML-6.1-gd.lib;vtkIOXMLParser-6.1-gd.lib;vtkjpeg-6.1-gd.lib;vtkjsoncpp-6.1-gd.lib;vtklibxml2-6.1-gd.lib;vtkmetaio-6.1-gd.lib;vtkNetCDF-6.1-gd.lib;vtkNetCDF_cxx-6.1-gd.lib;vtkoggtheora-6.1-gd.lib;vtkParallelCore-6.1-gd.lib;vtkpng-6.1-gd.lib;vtkproj4-6.1-gd.lib;vtkRenderingAnnotation-6.1-gd.lib;vtkRenderingContext2D-6.1-gd.lib;vtkRenderingCore-6.1-gd.lib;vtkRenderingFreeType-6.1-gd.lib;vtkRenderingFreeTypeOpenGL-6.1-gd.lib;vtkRenderingGL2PS-6.1-gd.lib;vtkRenderingImage-6.1-gd.lib;vtkRenderingLabel-6.1-gd.lib;vtkRenderingLIC-6.1-gd.lib;vtkRenderingLOD-6.1-gd.lib;vtkRenderingOpenGL-6.1-gd.lib;vtkRenderingVolume-6.1-gd.lib;vtkRenderingVolumeAMR-6.1-gd.lib;vtkRenderingVolumeOpenGL-6.1-gd.lib;vtksqlite-6.1-gd.lib;vtksys-6.1-gd.lib;vtktiff-6.1-gd.lib;vtkverdict-6.1-gd.lib;vtkViewsContext2D-6.1-gd.lib;vtkViewsCore-6.1-gd.lib;vtkViewsGeovis-6.1-gd.lib;vtkViewsInfovis-6.1-gd.lib;vtkzlib-6.1-gd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <StackReserveSize>10000000</StackReserveSize>
+      <StackCommitSize>10000000</StackCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /C /Y "$(KINECTSDK20_DIR)Redist\Fusion\x64\$(KinectFusionLib).dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kinect20.lib;$(KinectFusionLib).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /C /Y "$(KINECTSDK20_DIR)Redist\Fusion\x86\$(KinectFusionLib).dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kinect20.lib;$(KinectFusionLib).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /C /Y "$(KINECTSDK20_DIR)Redist\Fusion\x64\$(KinectFusionLib).dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="app.ico" />
+    <None Include="kinect2.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CloudFilters.h" />
+    <ClInclude Include="ImageRenderer.h" />
+    <ClInclude Include="PclHelper.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="KinectFusionExplorer.h" />
+    <ClInclude Include="KinectFusionHelper.h" />
+    <ClInclude Include="KinectFusionParams.h" />
+    <ClInclude Include="KinectFusionProcessor.h" />
+    <ClInclude Include="KinectFusionProcessorFrame.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SurfaceReconstruction.h" />
+    <ClInclude Include="Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CloudFilters.cpp" />
+    <ClCompile Include="ImageRenderer.cpp" />
+    <ClCompile Include="KinectFusionExplorer.cpp" />
+    <ClCompile Include="KinectFusionHelper.cpp" />
+    <ClCompile Include="KinectFusionProcessor.cpp" />
+    <ClCompile Include="KinectFusionProcessorFrame.cpp" />
+    <ClCompile Include="PclHelper.cpp" />
+    <ClCompile Include="SurfaceReconstruction.cpp" />
+    <ClCompile Include="Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="app.bmp" />
+    <Image Include="kinectv2.bmp" />
+    <Image Include="kinectv2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="3D-Scanner.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
